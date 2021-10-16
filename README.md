@@ -6,8 +6,9 @@
 
 1. Lab 1
 
-    1. Problem 1.1 : WAP to recognize strings with numbers or alphabets.</br>Date - 06/08/2021 </br>
-    2. 
+    1. Problem 1.1 : WAP to recognize strings with numbers or alphabets.</br>
+     Date - 06/08/2021 </br>
+    
         ```
         Sample Input :
         Raksha
@@ -78,8 +79,7 @@
 
     1. Problem 3.1: WAP to recognize vowels or consonants in string</br>
        Date - 20/08/2021 </br>
-       Source Code - [link](./Lab%203/vowel_consonant/vowel_consonant.l) <br>
-       Output (screenshot) - [link](./Lab%203/vowel_consonant/output.png)<br>
+      
 
         ```
         Sample Input:
