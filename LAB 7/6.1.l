@@ -1,20 +1,32 @@
 %{
-int tab=0,other=0,newLine=1,ws=0;
+//macros
+int keyCount=0,varCount=0,intCount=0,floatCount=0,opCount=0;
 %}
-digit [0-9]
+keyword bool|float|double|if|else|while|int|switch|for|char|break|enum|register|typedef|goto|sizeof|struct
+identifier [a-zA-Z_][a-zA-Z0-9_]*
+int [0-9]*
+float {int}+"."{int}+
+operator ("+"|"\-"|"/"|"%"|"\*"|">"|"<"|"."|"="|"!="|"&&"|"&"|"||"|";")
+eol \n
 %%
-\n {newLine++;};
-\t tab++;
-[ ] ws++;
-. other++;
+
+{keyword}  {keyCount++;} 
+{identifier}  {varCount++;}
+{int}  {intCount++;}
+{float}  {floatCount++;}
+{operator}  {opCount++;}
 %%
 
 int main () {
     yyin = fopen("input.txt", "r");
     yyout = fopen("output.txt", "w");
-    yylex ();
-    fprintf(yyout,"Total Characters detected : %d\n No. of tabs : %d\n No. of Lines: %d \n No. of white spaces: %d \n Other Characters: %d\n",tab+ws+newLine+other,tab,newLine,ws,other);
+    yylex();
+    fprintf(yyout,"No. of lexemes=%d\n",keyCount+intCount+floatCount+varCount+opCount); 
+    fprintf(yyout,"No. of keywords=%d\n",keyCount);
+    fprintf(yyout,"No. of identifiers=%d\n",varCount);
+    fprintf(yyout,"No. of integers=%d\n",intCount);
+    fprintf(yyout,"No. of fractions=%d\n",floatCount);
+    fprintf(yyout,"No. of operators=%d\n",opCount);
 }
 
 int yywrap(){return 1;}
-
