@@ -1,5 +1,5 @@
 %{
-// macros
+
 %}
 username [a-zA-Z0-9]{6,64}
 domainName [a-zA-Z0-9]{1,253}

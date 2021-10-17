@@ -12,7 +12,7 @@ digit [0-9]
  
 int main () {
 yylex ();
-printf("\nTotal Characters detected : %d\n No. of tabs : %d\n No. of Digits: %d \n No. of white spaces: %d \n Other Characters: %d\n",tab+ws+dig+other,tab,dig,ws,other);
+printf("\n Total Characters detected : %d\n No. of tabs : %d\n No. of Digits: %d \n No. of white spaces: %d \n Other Characters: %d\n",tab+ws+dig+other,tab,dig,ws,other);
 }
 int yywrap (void)
 {

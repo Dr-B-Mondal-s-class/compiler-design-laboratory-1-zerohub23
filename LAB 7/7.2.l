@@ -13,7 +13,7 @@ int main () {
     yyin = fopen("input.txt", "r");
     yyout = fopen("output.txt", "w");
     yylex ();
-    fprintf(yyout,"Total Characters detected : %d\n No. of tabs : %d\n No. of Lines: %d \n No. of white spaces: %d \n Other Characters: %d\n",tab+ws+newLine+other,tab,newLine,ws,other);
+    fprintf(yyout," Total Characters detected : %d\n No. of tabs : %d\n No. of Lines: %d \n No. of white spaces: %d \n Other Characters: %d\n",tab+ws+newLine+other,tab,newLine,ws,other);
 }
 
 int yywrap(){return 1;}

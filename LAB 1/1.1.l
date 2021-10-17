@@ -1,5 +1,5 @@
 %{
-//macros
+
 %}
 letter [A-Za-z]+ 
 digit [0-9]+ 

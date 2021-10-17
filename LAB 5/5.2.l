@@ -1,5 +1,5 @@
 %{
-	//macros
+	
 %}
 
 protocol "http"|"https"|"ftp"
